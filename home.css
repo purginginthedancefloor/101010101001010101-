@@ -1,16 +1,17 @@
 body {
   margin: 0;
   font-family: 'Cinzel', serif;
-  background: #000022;
+  overflow: hidden;
   color: #bafaff;
-  line-height: 1.6;
 }
 
 .nav {
+  position: relative;
   display: flex;
   justify-content: center;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.5);
   padding: 10px 0;
+  z-index: 10;
 }
 
 .nav a {
@@ -25,44 +26,28 @@ body {
   color: #ff00ff;
 }
 
-section {
-  padding: 60px 20px;
+.home-intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  z-index: 5;
 }
 
 .glow {
   font-size: 3rem;
-  color: #00ffff;
   text-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
+  animation: float 6s ease-in-out infinite;
 }
 
 .tagline {
   font-size: 1.5rem;
   color: #aaffff;
+  text-shadow: 0 0 10px #00ffff;
 }
 
-form input, form textarea {
-  width: 80%;
-  max-width: 400px;
-  padding: 12px;
-  margin: 8px 0;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-}
-
-form button {
-  padding: 12px 25px;
-  border-radius: 5px;
-  border: none;
-  background: #00ffff;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-form button:hover {
-  background: #ff00ff;
-  color: #fff;
+@keyframes float {
+  0%,100% { transform: translate(-50%, -52%); }
+  50% { transform: translate(-50%, -48%); }
 }
