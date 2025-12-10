@@ -35,6 +35,7 @@ function enterSite() {
   document.body.style.opacity = "0";
 
   setTimeout(() => {
-    window.location.href = "home.html"; // go to main site
-  }, 1500);
+   setTimeout(() => { window.location.href = "coming-soon.html"; }, 1500);
+
+ 
 }
